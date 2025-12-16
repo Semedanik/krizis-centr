@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Услуги центра | Кризисный центр помощи женщинам и детям</title>
+    <meta
+      name="description"
+      content="Психологическая, юридическая, медицинская и социальная поддержка женщин и детей. Узнайте, как получить помощь стационара, консультации и дополнительные услуги центра."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/imgs/theme/logo_tree_corrected.svg"
+    />
+    <!-- Template CSS  -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/widgets.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+      .services-tabs {
+        margin-bottom: 50px;
+      }
+      .services-tabs .nav-tabs {
+        border: none;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+      .services-tabs .nav-item {
+        margin-bottom: 0;
+      }
+      .services-tabs .nav-tabs .nav-item .nav-link,
+      .services-tabs .nav-link {
+        border: 2px solid var(--color-brand-4) !important;
+        border-radius: 50px !important;
+        padding: 14px 28px !important;
+        color: var(--color-grey-700) !important;
+        font-weight: 600;
+        font-size: 15px;
+        transition: background-color 0.3s ease, border-color 0.3s ease,
+          color 0.3s ease, box-shadow 0.3s ease !important;
+        cursor: pointer;
+        background-color: #fff !important;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        min-width: 120px;
+        text-align: center;
+        transform: none !important;
+        margin-right: 0 !important;
+      }
+      .services-tabs .nav-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+      .services-tabs .nav-link:hover::before {
+        left: 100%;
+      }
+      .services-tabs .nav-tabs .nav-item .nav-link:hover,
+      .services-tabs .nav-link:hover {
+        background-color: var(--color-brand-3) !important;
+        border-color: var(--color-brand-3) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+        color: var(--color-dark) !important;
+        transform: none !important;
+        margin-right: 0 !important;
+        border-width: 2px !important;
+        border-bottom-width: 2px !important;
+      }
+      .services-tabs .nav-tabs .nav-item .nav-link.active,
+      .services-tabs .nav-link.active {
+        background: linear-gradient(
+          135deg,
+          var(--color-brand-1) 0%,
+          #ff8c5a 100%
+        ) !important;
+        border-color: var(--color-brand-1) !important;
+        color: #fff !important;
+        box-shadow: 0 2px 8px rgba(255, 140, 90, 0.25) !important;
+        font-weight: 700;
+        transform: none !important;
+        margin-right: 0 !important;
+        border-width: 2px !important;
+        border-bottom-width: 2px !important;
+        border-style: solid !important;
+      }
+      .services-tabs .nav-tabs .nav-item .nav-link.active:hover,
+      .services-tabs .nav-link.active:hover {
+        box-shadow: 0 2px 8px rgba(255, 140, 90, 0.25) !important;
+        transform: none !important;
+        border-width: 2px !important;
+        border-bottom-width: 2px !important;
+      }
+      .services-tabs .nav-link:not(.active) {
+        background-color: #fff;
+      }
+      .services-tabs .nav-link:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255, 140, 90, 0.2);
+      }
+      .service-accordion-item {
+        border: 1px solid var(--mutted-border-color);
+        border-radius: 12px;
+        background-color: #fff;
+        box-shadow: var(--box-shadow-normal);
+      }
+      .service-accordion-toggle {
+        width: 100%;
+        background: transparent;
+        border: none;
+        padding: 20px 24px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+      }
+      .service-accordion-toggle:focus {
+        outline: none;
+      }
+      .service-accordion-toggle i {
+        transition: transform 0.2s ease;
+      }
+      .service-accordion-toggle.collapsed i {
+        transform: rotate(-90deg);
+      }
+      .service-accordion-body {
+        padding: 0 24px 24px;
+      }
+      .check-list {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+      .check-list li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+      .check-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--color-secondary);
+        font-weight: 700;
+      }
+      .services-highlight {
+        border-radius: 16px;
+        background-color: var(--color-brand-3);
+        padding: 20px 24px;
+        margin-bottom: 40px;
+      }
+      .archive-header .breadcrumb {
+        margin-top: 0;
+      }
+      @media (max-width: 991.98px) {
+        .archive-header .breadcrumb {
+          margin-top: 30px;
+          text-align: left;
+        }
+      }
+      .service-card {
+        border-radius: 16px;
+        background-color: var(--color-brand-4);
+        padding: 25px;
+        height: 100%;
+      }
+      .service-card.bg-white {
+        background-color: #fff !important;
+        box-shadow: var(--box-shadow-normal);
+      }
+      @media (max-width: 991.98px) {
+        .services-tabs .nav-tabs {
+          gap: 8px;
+        }
+        .services-tabs .nav-link {
+          padding: 12px 20px;
+          font-size: 14px;
+          min-width: auto;
+        }
+      }
+      @media (max-width: 767.98px) {
+        .services-tabs {
+          margin-bottom: 30px;
+        }
+        .services-tabs .nav-tabs {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .services-tabs .nav-link {
+          width: 100%;
+          padding: 14px 20px;
+          border-radius: 12px;
+        }
+        .services-tabs .nav-link:hover,
+        .services-tabs .nav-link.active {
+          transform: none;
+        }
+        .service-card {
+          padding: 20px;
+        }
+      }
+      #psychologists img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+    </style>
+  </head>
+
+  <body class="home-page-1">
+    <div class="scroll-progress bg-grey-900"></div>
+    <!-- Start Preloader -->
+    <div class="preloader text-center">
+      <div class="loader"></div>
+    </div>
+    <!--Offcanvas sidebar-->
+    <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
+      <button class="off-canvas-close">
+        <img class="svg-icon-24" src="assets/imgs/theme/svg/close.svg" alt="" />
+      </button>
+      <div class="sidebar-inner">
+        <div class="sidebar-widget widget-creative-menu">
+          <ul>
+            <li><a href="category.html">Психологическая помощь</a></li>
+            <li><a href="category-big.html">Юридическая поддержка</a></li>
+            <li><a href="category-grid.html">Социальная реабилитация</a></li>
+            <li><a href="category-list.html">Стационарное обслуживание</a></li>
+          </ul>
+        </div>
+        <div class="offcanvas-copyright mt-65">
+          <h6 class="text-muted text-uppercase mb-20 font-heading text-white">
+            Кризисный центр
+          </h6>
+          <p>
+            Мы оказываем помощь женщинам и детям, оказавшимся в трудной
+            жизненной ситуации.
+          </p>
+          <p>
+            <strong class="color-black">Адрес</strong><br />
+            ул. Дубки, д.9А<br />
+            Москва
+          </p>
+          <p>
+            <strong class="color-black">Телефон</strong><br />
+            8 (499) 977-17-05
+          </p>
+        </div>
+      </div>
+    </aside>
+    <!-- Start Header -->
+    <div class="topbar bg-brand-3 pt-15 pb-15 font-md">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <div
+              class="topbar-contacts text-dark font-sm d-flex flex-wrap justify-content-between"
+            >
+              <span>
+                <strong>Горячая линия:</strong><br />
+                8 (499) 977-17-05
+              </span>
+              <span>
+                <strong>ул. Дубки, д.9А:</strong><br />
+                8 (499) 729-51-81
+              </span>
+              <span>
+                <strong>ул. Новопоселковая, д.3Б:</strong><br />
+                «Надежда»<br />
+                8(495)442-24-84
+              </span>
+              <span>
+                <strong>ул. Нежинская, д.10:</strong><br />
+                «Маленькая мама»<br />
+                8(495)442-24-84
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="off-canvas-toggle-cover d-inline-block">
+        <div
+          class="off-canvas-toggle hidden d-inline-block"
+          id="off-canvas-toggle"
+        >
+          <img
+            class="svg-icon-24"
+            src="assets/imgs/theme/svg/menu.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Start Header -->
+    <header class="main-header header-sticky header-fluid">
+      <div class="position-relative">
+        <div class="container-fluid align-self-center">
+          <div class="header-style-1 header-style-2">
+            <div class="logo">
+              <a href="index.html"
+                ><img src="assets/imgs/theme/logo_tree_corrected.svg" alt=""
+              /></a>
+            </div>
+            <div class="main-nav d-none d-lg-block">
+              <nav>
+                <!--Desktop menu-->
+                <ul class="main-menu d-none d-lg-inline">
+                  <li><a href="index.html">Главная</a></li>
+                  <li class="menu-item-has-children">
+                    <a href="page-about.html">О центре</a>
+                    <ul class="sub-menu font-small">
+                      <li><a href="page-openness.html">Информационная открытость</a></li>
+                      <li><a href="page-museum.html">Музей боевой славы</a></li>
+                      <li><a href="page-partners.html">Попечительский совет и партнеры</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="page-services.html">Услуги</a>
+                    <ul class="sub-menu font-small">
+                      <li><a href="page-services.html#psychological">Психологическая помощь</a></li>
+                      <li><a href="page-services.html#legal">Юридическая поддержка</a></li>
+                      <li><a href="page-services.html#social">Социальная реабилитация</a></li>
+                      <li><a href="page-services.html#stationary">Стационарное обслуживание</a></li>
+                      <li><a href="page-services.html#comprehensive">Комплексная реабилитация</a></li>
+                      <li><a href="page-services.html#developmental">Развивающие занятия</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="page-prices.html">Цены</a></li>
+                  <li class="menu-item-has-children">
+                    <a href="category-list.html">Информация</a>
+                    <ul class="sub-menu font-small">
+                      <li><a href="category-list.html">Новости</a></li>
+                                            <li><a href="page-video.html">Видео</a></li>
+                      <li><a href="gallery.html">Фотогалерея</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="page-contact.html">Контакты</a></li>
+                </ul>
+                <!--Mobile menu-->
+                <ul id="mobile-menu" class="d-block d-lg-none text-muted">
+                  <li><a href="index.html">Главная</a></li>
+                  <li class="menu-item-has-children">
+                    <a href="page-about.html">О центре</a>
+                    <ul class="sub-menu font-small">
+                      <li><a href="page-openness.html">Информационная открытость</a></li>
+                      <li><a href="page-museum.html">Музей боевой славы</a></li>
+                      <li><a href="page-partners.html">Попечительский совет и партнеры</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="category.html">Услуги</a>
+                    <ul class="sub-menu font-small">
+                      <li>
+                        <a href="category.html#tab-shelter">Стационар</a>
+                      </li>
+                      <li>
+                        <a href="category.html#tab-psychology">Психология</a>
+                      </li>
+                      <li>
+                        <a href="category.html#tab-med">Медицина</a>
+                      </li>
+                      <li>
+                        <a href="category.html#tab-kids">Развитие</a>
+                      </li>
+                      <li>
+                        <a href="category.html#tab-legal">Право</a>
+                      </li>
+                      <li>
+                        <a href="category.html#tab-extra">Разное</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="page-prices.html">Цены</a></li>
+                  <li><a href="category-list.html">Новости</a></li>
+                  <li><a href="page-contact.html">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!--end: main-nav-->
+            <div class="header-right d-none d-lg-block">
+              <button class="search-icon d-md-inline">
+                <img src="assets/imgs/theme/svg/search.svg" alt="" />
+              </button>
+              <span class="notice-icon hover-up-3">
+                <img src="assets/imgs/theme/vk.png" alt="VK" />
+              </span>
+              <span class="notice-icon hover-up-3">
+                <img src="assets/imgs/theme/telegram.png" alt="Telegram" />
+              </span>
+              <button
+                class="btn btn-md bg-dark text-white ml-15 box-shadow d-none d-lg-inline"
+              >
+                <a href="page-contact.html">Связаться с нами</a>
+              </button>
+            </div>
+          </div>
+          <div class="mobile_menu d-lg-none d-block"></div>
+        </div>
+      </div>
+    </header>
+    <!--Start search form-->
+    <div class="main-search-form bg-brand-4">
+      <div class="container">
+        <div class="pt-50 pb-50">
+          <div class="row mb-20">
+            <div class="col-12 align-self-center main-search-form-cover m-auto">
+              <p class="text-center"><span class="display-1">Поиск</span></p>
+              <form action="#" class="search-header">
+                <div class="input-group w-100">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Поиск статей и информации"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-search bg-white" type="submit">
+                      <img
+                        class="svg-icon-24"
+                        src="assets/imgs/theme/svg/search.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row mt-80 text-center">
+            <div class="col-12 font-small suggested-area">
+              <h5 class="suggested font-heading mb-20 text-grey-400">
+                <strong>Рекомендуемые темы:</strong>
+              </h5>
+              <ul class="list-inline d-inline-block">
+                <li class="list-inline-item">
+                  <a href="category.html">Психологическая помощь</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="category.html">Юридическая поддержка</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="category.html">Социальная реабилитация</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="category.html">Телефон доверия</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="category.html">Стационарное обслуживание</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="category.html">Помощь женщинам</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="category.html">Помощь детям</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="category.html">Кризисная ситуация</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Start Main content -->
+    <main>
+      <section class="pt-65 pb-35 bg-white services-hero">
+        <div class="container">
+          <div class="archive-header">
+            <div class="row align-items-start">
+              <div class="col-lg-9">
+                <div class="archive-header-title">
+                  <p class="text-uppercase text-muted font-sm mb-10">
+                    Комплексная помощь женщинам и детям
+                  </p>
+                  <h1 class="font-heading mb-20">
+                    Услуги ГБУ «Кризисный центр помощи женщинам и детям»
+                  </h1>
+                  <p>
+                    Мы сопровождаем женщин и детей в кризисной ситуации:
+                    предоставляем безопасное пространство, восстанавливаем
+                    здоровье, защищаем права и укрепляем семью. На одной
+                    странице собраны ключевые сервисы, чтобы вы быстро нашли
+                    нужную поддержку.
+                  </p>
+                  <div class="services-highlight mt-40">
+                    <div class="row">
+                      <div class="col-md-4 mb-20 mb-md-0">
+                        <h6
+                          class="text-uppercase font-heading text-muted mb-10"
+                        >
+                          24/7 защита
+                        </h6>
+                        <p class="mb-0">
+                          Стационар и кризисные отделения принимают женщин с
+                          детьми круглосуточно и помогают выйти из насилия.
+                        </p>
+                      </div>
+                      <div class="col-md-4 mb-20 mb-md-0">
+                        <h6
+                          class="text-uppercase font-heading text-muted mb-10"
+                        >
+                          Междисциплинарная команда
+                        </h6>
+                        <p class="mb-0">
+                          Психологи, юристы, врачи и педагоги действуют по
+                          единому плану ИППСУ и сопровождают семью на каждом
+                          шаге.
+                        </p>
+                      </div>
+                      <div class="col-md-4 mb-20 mb-md-0">
+                        <h6
+                          class="text-uppercase font-heading text-muted mb-10"
+                        >
+                          Индивидуальный маршрут
+                        </h6>
+                        <p class="mb-0">
+                          Диагностика, реабилитация и поддержка при выходе в
+                          безопасное пространство и финансовую
+                          самостоятельность.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 text-lg-right">
+                <div class="breadcrumb">
+                  <a href="index.html" rel="nofollow">Главная</a>
+                  <span></span> Услуги
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-padding">
+        <div class="container">
+          <div class="services-tabs mb-40">
+            <ul class="nav nav-tabs" id="servicesTab" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="tab-shelter-tab"
+                  data-toggle="tab"
+                  href="#tab-shelter"
+                  role="tab"
+                  aria-controls="tab-shelter"
+                  aria-selected="true"
+                >
+                  Стационар
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="tab-psychology-tab"
+                  data-toggle="tab"
+                  href="#tab-psychology"
+                  role="tab"
+                  aria-controls="tab-psychology"
+                  aria-selected="false"
+                >
+                  Психология
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="tab-med-tab"
+                  data-toggle="tab"
+                  href="#tab-med"
+                  role="tab"
+                  aria-controls="tab-med"
+                  aria-selected="false"
+                >
+                  Медицина
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="tab-kids-tab"
+                  data-toggle="tab"
+                  href="#tab-kids"
+                  role="tab"
+                  aria-controls="tab-kids"
+                  aria-selected="false"
+                >
+                  Развитие
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="tab-legal-tab"
+                  data-toggle="tab"
+                  href="#tab-legal"
+                  role="tab"
+                  aria-controls="tab-legal"
+                  aria-selected="false"
+                >
+                  Право
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="tab-extra-tab"
+                  data-toggle="tab"
+                  href="#tab-extra"
+                  role="tab"
+                  aria-controls="tab-extra"
+                  aria-selected="false"
+                >
+                  Разное
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content" id="servicesTabContent">
+            <!-- Tab 1 -->
+            <div
+              class="tab-pane fade show active"
+              id="tab-shelter"
+              role="tabpanel"
+              aria-labelledby="tab-shelter-tab"
+            >
+              <div class="row">
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card bg-white h-100">
+                    <h3 class="font-heading mb-20">
+                      Стационар и кризисный центр
+                    </h3>
+                    <p>
+                      Безопасное проживание, социально-медицинская и
+                      психологическая реабилитация для женщин и женщин с детьми,
+                      переживших насилие или оказавшихся в кризисной ситуации.
+                    </p>
+                    <ul class="list-style-1">
+                      <li>
+                        Предоставляем жильё, питание, сопровождение специалистов
+                        и поддержку семьи до полного выхода из кризиса.
+                      </li>
+                      <li>
+                        Формируем индивидуальную программу предоставления
+                        социальных услуг (ИППСУ) и помогаем выполнить каждый
+                        пункт.
+                      </li>
+                      <li>
+                        Работаем в тесной связке со службами «Надежда» и
+                        «Маленькая мама».
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card h-100">
+                    <h5 class="mb-15">Когда обращаться</h5>
+                    <p>
+                      Если вы столкнулись с физическим, сексуальным или
+                      психологическим насилием, остались без жилья, испытываете
+                      угрозу безопасности для себя и ребёнка или нуждаетесь в
+                      срочной защите.
+                    </p>
+                    <p>
+                      <strong>Адреса стационара:</strong> ул. Дубки, д.9А; ул.
+                      Новопоселковая, д.3Б («Надежда»); ул. Нежинская, д.10
+                      («Маленькая мама»).
+                    </p>
+                    <p class="mb-0">
+                      <strong>Телефоны:</strong> (499) 977-17-05, (499)
+                      729-51-81, (495) 442-24-84.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-40" id="shelterAccordion">
+                <div class="service-accordion-item mb-20">
+                  <button
+                    class="service-accordion-toggle"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#shelterEligibility"
+                    aria-expanded="true"
+                    aria-controls="shelterEligibility"
+                  >
+                    Кого принимаем
+                    <i class="elegant-icon arrow_carrot-down"></i>
+                  </button>
+                  <div id="shelterEligibility" class="collapse show">
+                    <div class="service-accordion-body">
+                      <p class="text-muted font-sm mb-15">
+                        Основания приёма определяются фактом проживания в Москве
+                        (постоянная регистрация или подтверждённое фактическое
+                        проживание) и документальным подтверждением кризисной
+                        ситуации.
+                      </p>
+                      <ul class="check-list mb-0">
+                        <li>
+                          Женщины и женщины с детьми, имеющие постоянную
+                          регистрацию в Москве и пострадавшие от семейного
+                          насилия либо иной кризисной ситуации.
+                        </li>
+                        <li>
+                          Женщины и женщины с детьми, фактически проживающие в
+                          Москве (подтверждают проживание договором аренды,
+                          временной регистрацией, трудовым договором, справкой
+                          самозанятого, справками из ОУ/поликлиник при наличии
+                          детей).
+                        </li>
+                        <li>
+                          Несовершеннолетние беременные и юные матери с детьми.
+                        </li>
+                        <li>
+                          Москвички, оказавшиеся в кризисе и не имеющие
+                          возможности проживать по месту регистрации (при
+                          наличии ходатайства и выписки из ЕЖД).
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-accordion-item mb-20">
+                  <button
+                    class="service-accordion-toggle collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#shelterDocs"
+                    aria-expanded="false"
+                    aria-controls="shelterDocs"
+                  >
+                    Перечень документов
+                    <i class="elegant-icon arrow_carrot-down"></i>
+                  </button>
+                  <div id="shelterDocs" class="collapse">
+                    <div class="service-accordion-body">
+                      <div class="row">
+                        <div class="col-md-6 mb-20">
+                          <h6 class="text-uppercase font-sm text-muted mb-10">
+                            Базовый пакет
+                          </h6>
+                          <ul class="check-list mb-0">
+                            <li>
+                              Справка из травмпункта или выписка из медкарты.
+                            </li>
+                            <li>Талон-уведомление из ОМВД.</li>
+                            <li>Выписка из ЕЖД.</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6 mb-20">
+                          <h6 class="text-uppercase font-sm text-muted mb-10">
+                            Подтверждение проживания в Москве
+                          </h6>
+                          <ul class="check-list mb-0">
+                            <li>
+                              Договор аренды жилого помещения или свидетельство
+                              о временной регистрации.
+                            </li>
+                            <li>
+                              Трудовой договор или справка с места работы.
+                            </li>
+                            <li>Справка о постановке на учёт самозанятого.</li>
+                            <li>
+                              Справки из образовательной организации/поликлиники
+                              (при наличии детей).
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="text-uppercase font-sm text-muted mb-10">
+                            Для несовершеннолетних беременных и юных матерей
+                          </h6>
+                          <ul class="check-list mb-0">
+                            <li>
+                              Ходатайство, подтверждающее невозможность
+                              проживания по месту регистрации.
+                            </li>
+                            <li>Выписка из ЕЖД.</li>
+                          </ul>
+                          <p class="font-sm text-muted mt-10 mb-0">
+                            Список может дополняться специалистами стационара в
+                            зависимости от ситуации.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-accordion-item">
+                  <button
+                    class="service-accordion-toggle collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#shelterProcess"
+                    aria-expanded="false"
+                    aria-controls="shelterProcess"
+                  >
+                    Как мы работаем: диагностика → реабилитация → выход
+                    <i class="elegant-icon arrow_carrot-down"></i>
+                  </button>
+                  <div id="shelterProcess" class="collapse">
+                    <div class="service-accordion-body">
+                      <div class="row">
+                        <div class="col-12 mb-20">
+                          <div class="service-card bg-white h-100">
+                            <span class="text-uppercase font-sm text-muted">
+                              Шаг 1
+                            </span>
+                            <h5 class="mt-10 mb-15">Первичная диагностика</h5>
+                            <ul class="check-list mb-0">
+                              <li>Диагностическая беседа и анализ ситуации.</li>
+                              <li>Изучение документов и уровня кризисности.</li>
+                              <li>Оценка психоэмоционального состояния.</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-20">
+                          <div class="service-card bg-white h-100">
+                            <span class="text-uppercase font-sm text-muted">
+                              Шаг 2
+                            </span>
+                            <h5 class="mt-10 mb-15">Реабилитация</h5>
+                            <ul class="check-list mb-0">
+                              <li>
+                                Внесение сигнала в ИС «Семейный помощник» (при
+                                поступлении с детьми).
+                              </li>
+                              <li>
+                                Социально-бытовые, медицинские, психологические
+                                и правовые услуги по 442-ФЗ.
+                              </li>
+                              <li>
+                                Социально-трудовое и педагогическое
+                                сопровождение, помощь в трудоустройстве и
+                                организации досуга.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-20">
+                          <div class="service-card bg-white h-100">
+                            <span class="text-uppercase font-sm text-muted">
+                              Шаг 3
+                            </span>
+                            <h5 class="mt-10 mb-15">Повторная диагностика</h5>
+                            <ul class="check-list mb-0">
+                              <li>Контрольная беседа и анализ динамики.</li>
+                              <li>Оценка документов, результатов ИППСУ.</li>
+                              <li>
+                                Принятие решения о завершении или продолжении.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-20">
+                          <div class="service-card bg-white h-100">
+                            <span class="text-uppercase font-sm text-muted">
+                              Шаг 4
+                            </span>
+                            <h5 class="mt-10 mb-15">Выход из стационара</h5>
+                            <ul class="check-list mb-0">
+                              <li>Личное заявление и устойчивая ремиссия.</li>
+                              <li>
+                                Решённый жилищный вопрос и безопасное
+                                проживание.
+                              </li>
+                              <li>
+                                Финансовая независимость: трудоустройство,
+                                переобучение, восстановление доступа к
+                                средствам.
+                              </li>
+                              <li>
+                                Социально-психологическое благополучие,
+                                готовность к судебным процедурам, оформление
+                                ребёнка в ОУ.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Tab 2 -->
+            <div
+              class="tab-pane fade"
+              id="tab-psychology"
+              role="tabpanel"
+              aria-labelledby="tab-psychology-tab"
+            >
+              <div class="services-highlight mb-30">
+                <div class="row align-items-center">
+                  <div class="col-lg-8">
+                    <h3 class="font-heading mb-10">Психологическая служба</h3>
+                    <p class="mb-0">
+                      Работаем с травмой, семейными конфликтами,
+                      детско-родительскими отношениями, одиночеством, страхами,
+                      зависимостями и депрессией.
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-lg-right mt-20 mt-lg-0">
+                    <p class="text-muted font-sm mb-5">
+                      Все консультации и тренинги для москвичей — бесплатно.
+                    </p>
+                    <p class="mb-0"><strong>Запись:</strong> (499) 977-17-05</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4 mb-30">
+                  <div
+                    class="service-card bg-white h-100 d-flex flex-column hover-up-2"
+                    style="transition: all 0.3s ease"
+                  >
+                    <div class="mb-20">
+                      <h4 class="mb-15">Индивидуальные консультации</h4>
+                      <p class="font-sm text-muted mb-15">
+                        Личный прием — это безопасное пространство доверия, где
+                        вас услышат и поддержат без осуждения.
+                      </p>
+                      <ul class="check-list mb-0 font-sm">
+                        <li>Преодоление тревоги и кризисов</li>
+                        <li>Гармонизация отношений в семье</li>
+                        <li>Поиск внутренних ресурсов</li>
+                      </ul>
+                    </div>
+                    <div
+                      class="mt-auto pt-20"
+                      style="border-top: 1px solid var(--mutted-border-color)"
+                    >
+                      <p class="font-xs text-muted mb-15">
+                        Познакомьтесь с опытом наших специалистов, чтобы выбрать
+                        того, кто вам ближе:
+                      </p>
+                      <a
+                        href="#psychologists"
+                        class="btn btn-md bg-brand-1 text-white w-100 d-flex justify-content-between align-items-center"
+                        style="border-radius: 8px; padding: 12px 20px"
+                      >
+                        <span>Наши психологи</span>
+                        <i class="elegant-icon arrow_down"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mb-30">
+                  <div class="service-card h-100">
+                    <h4 class="mb-15">Мужская группа (18+)</h4>
+                    <p>
+                      Групповая работа проходит по четвергам с 19:00 до 21:00 и
+                      предоставляет безопасное пространство для честного
+                      диалога.
+                    </p>
+                    <ul class="check-list mb-0">
+                      <li>Работа с агрессивными тенденциями и несвободой.</li>
+                      <li>Развитие навыков саморегуляции и устойчивости.</li>
+                      <li>
+                        Осознанное проживание эмоций и построение здоровых
+                        отношений.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4 mb-30">
+                  <div class="service-card h-100">
+                    <h4 class="mb-15">Лайф-коучинг</h4>
+                    <p>
+                      Практика для тех, кто хочет навести порядок в разных
+                      сферах жизни: карьере, здоровье, финансах и отношениях.
+                    </p>
+                    <ul class="check-list mb-0">
+                      <li>
+                        Диагностика целей и поиск точек роста вместе с коучем.
+                      </li>
+                      <li>
+                        Баланс карьеры и личной жизни, выработка плана действий.
+                      </li>
+                      <li>
+                        Поддержка в переходных периодах и при принятии решений.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Психологи -->
+              <div
+                id="psychologists"
+                class="mt-50 pt-50"
+                style="
+                  border-top: 1px solid var(--mutted-border-color);
+                  scroll-margin-top: 140px;
+                "
+              >
+                <div class="row mb-30">
+                  <div class="col-lg-8">
+                    <h6 class="text-uppercase font-heading text-muted mb-15">
+                      Профессиональная поддержка
+                    </h6>
+                    <h2 class="font-heading">Команда психологов центра</h2>
+                  </div>
+                  <div
+                    class="col-lg-4 align-self-end text-lg-right d-none d-lg-block"
+                  >
+                    <p class="text-muted font-sm">
+                      Высококвалифицированные специалисты<br />с опытом работы в
+                      кризисных ситуациях
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 mb-30">
+                    <img
+                      class="mb-15 border-radius-10"
+                      src="assets/imgs/psy/vyzhanova.jpg"
+                      alt="Выжанова Любовь Юрьевна"
+                    />
+                    <h5 class="mb-5 font-md">Выжанова Любовь Юрьевна</h5>
+                    <p class="font-sm text-muted mb-15">
+                      Психолог-консультант, конфликтолог, заведующая отделением
+                      психологической помощи женщинам и детям
+                    </p>
+                    <div class="font-sm">
+                      <p class="mb-10">
+                        Дипломированный специалист в области кризисных
+                        состояний, экзистенциального консультирования, различных
+                        видов арт-терапии. В практике психологического
+                        консультирования более 20 лет.
+                      </p>
+                      <p class="mb-10">
+                        Психологическое консультирование клиентов разного
+                        возраста в острых кризисных ситуациях:
+                        детско-родительские отношения, развод, измена, насилие;
+                        психосоматические расстройства разной степени тяжести.
+                      </p>
+                      <p class="mb-0">
+                        Автор и ведущая программ по коррекции созависимого
+                        поведения, исцелению травмы, повышению самооценки.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-30">
+                    <img
+                      class="mb-15 border-radius-10"
+                      src="assets/imgs/psy/safonova.jpg"
+                      alt="Сафонова Юлия Борисовна"
+                    />
+                    <h5 class="mb-5 font-md">Сафонова Юлия Борисовна</h5>
+                    <p class="font-sm text-muted mb-15">
+                      Психолог-консультант, практикующий психолог
+                    </p>
+                    <div class="font-sm">
+                      <p class="mb-10">
+                        Специалист в области Транзактного анализа, терапии
+                        внутренних семейных систем по Р. Шварцу (IFS),
+                        дипломированный специалист по семейной системной
+                        терапии, метафорическим ассоциативным картам.
+                      </p>
+                      <p class="mb-10">
+                        <strong>Сферы профессионального интереса:</strong><br />
+                        детско-родительские отношения, отношения в паре, работа
+                        с депрессией, тревогой, страхами и фобиями,
+                        психосоматическими расстройствами.
+                      </p>
+                      <p class="mb-0">Опыт работы – более 4 лет.</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-30">
+                    <img
+                      class="mb-15 border-radius-10"
+                      src="assets/imgs/psy/novikova.jpg"
+                      alt="Новикова Дарья Олеговна"
+                    />
+                    <h5 class="mb-5 font-md">Новикова Дарья Олеговна</h5>
+                    <p class="font-sm text-muted mb-15">
+                      Педагог-психолог, психолог-консультант
+                    </p>
+                    <div class="font-sm">
+                      <p class="mb-10">
+                        Специалист по семейной системной терапии.
+                        Дипломированный специалист в области различных видов
+                        арт-терапии.
+                      </p>
+                      <p class="mb-0">
+                        Автор статей по психологическим проблемам семьи. Опыт
+                        работы – 1 год.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-30">
+                    <img
+                      class="mb-15 border-radius-10"
+                      src="assets/imgs/psy/petina.jpg"
+                      alt="Петина Анна Игоревна"
+                    />
+                    <h5 class="mb-5 font-md">Петина Анна Игоревна</h5>
+                    <p class="font-sm text-muted mb-15">Психолог-консультант</p>
+                    <div class="font-sm">
+                      <p class="mb-10">
+                        Специалист в области кризисных состояний, семейных
+                        конфликтов, детско-родительских отношений.
+                      </p>
+                      <p class="mb-0">
+                        Магистр психологии. Опыт работы – более 3 лет.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-30">
+                    <img
+                      class="mb-15 border-radius-10"
+                      src="assets/imgs/psy/shuvalov1.jpg"
+                      alt="Шувалов Александр Владимирович"
+                    />
+                    <h5 class="mb-5 font-md">Шувалов Александр Владимирович</h5>
+                    <p class="font-sm text-muted mb-15">
+                      Кандидат психологических наук, психолог ГБУ «Кризисный
+                      центр помощи женщинам и детям»
+                    </p>
+                    <div class="font-sm">
+                      <p class="mb-10">
+                        Доцент факультета психологии Российского православного
+                        университета святого Иоанна Богослова, главный редактор
+                        научного альманаха «Живая вода».
+                      </p>
+                      <p class="mb-10">
+                        Приоритеты профессиональной деятельности – ориентация на
+                        фундаментальный профессионализм, оказание
+                        квалифицированной психологической помощи.
+                      </p>
+                      <p class="mb-0">
+                        Автор более ста публикаций. Победитель XIX Национального
+                        конкурса «Золотая Психея» в номинации «книга года по
+                        психологии». Почетный работник общего образования
+                        Российской Федерации.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-30">
+                    <img
+                      class="mb-15 border-radius-10"
+                      src="assets/imgs/psy/shiryaev.jpg"
+                      alt="Ширяев Александр Иванович"
+                    />
+                    <h5 class="mb-5 font-md">Ширяев Александр Иванович</h5>
+                    <p class="font-sm text-muted mb-15">
+                      Клинический психолог, психолог ГБУ «Кризисный центр помощи
+                      женщинам и детям»
+                    </p>
+                    <div class="font-sm">
+                      <p class="mb-10">
+                        <strong>Основные направления деятельности:</strong
+                        ><br />
+                        психология кризисных состояний, семейные кризисы,
+                        психосоматика, психология здоровья, патопсихология.
+                      </p>
+                      <p class="mb-10">
+                        Опыт работы в госпитале с больными ковидом.
+                      </p>
+                      <p class="mb-10">
+                        <strong>Сфера профессиональных интересов:</strong><br />
+                        патогенетический подход в психологическом
+                        консультировании, психология отношений,
+                        духовно-нравственная психология.
+                      </p>
+                      <p class="mb-0">Опыт работы – более 10 лет.</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-30">
+                    <img
+                      class="mb-15 border-radius-10"
+                      src="assets/imgs/psy/smirnova.jpeg"
+                      alt="Смирнова Елена Андреевна"
+                    />
+                    <h5 class="mb-5 font-md">Смирнова Елена Андреевна</h5>
+                    <p class="font-sm text-muted mb-15">
+                      Психолог-консультант ГБУ «Кризисный центр помощи женщинам
+                      и детям»
+                    </p>
+                    <div class="font-sm">
+                      <p class="mb-10">
+                        Практикующий специалист в области семейной и детской
+                        психологии, работе с женщинами и детьми в трудной
+                        жизненной ситуации.
+                      </p>
+                      <p class="mb-10">
+                        <strong>Области исследований:</strong><br />
+                        психологическая антропология, философская психология,
+                        психология здоровья, исследования духовно-нравственной
+                        сферы личности и межличностных отношений.
+                      </p>
+                      <p class="mb-10">
+                        Автор научных публикаций. Магистр психологии (Российский
+                        православный университет святого Иоанна Богослова),
+                        соискатель ученой степени кандидата психологических наук
+                        (Институт психологии Российской академии наук).
+                      </p>
+                      <p class="mb-0">Опыт работы – более 5 лет.</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mb-30">
+                    <img
+                      class="mb-15 border-radius-10"
+                      src="assets/imgs/psy/tereschenko.jpg"
+                      alt="Терещенко Анна Сергеевна"
+                    />
+                    <h5 class="mb-5 font-md">Терещенко Анна Сергеевна</h5>
+                    <p class="font-sm text-muted mb-15">
+                      Клинический психолог, психолог-консультант
+                    </p>
+                    <div class="font-sm">
+                      <p class="mb-0">
+                        В практике психологического консультирования и групповой
+                        работы использует разнообразные методы, такие как
+                        психодрама, EMDR (десенсибилизация и переработка
+                        травматического опыта) и арт-терапия.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Tab 3 -->
+            <div
+              class="tab-pane fade"
+              id="tab-med"
+              role="tabpanel"
+              aria-labelledby="tab-med-tab"
+            >
+              <div class="row">
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card bg-white h-100">
+                    <h4 class="mb-15">УЗИ-диагностика</h4>
+                    <p>
+                      Современные ультразвуковые исследования подкожных
+                      структур, внутренних органов и состояния плода.
+                    </p>
+                    <ul class="check-list mb-0">
+                      <li>Органы брюшной полости.</li>
+                      <li>Почки, надпочечники, мочевой пузырь.</li>
+                      <li>
+                        Предстательная железа и мочевой пузырь с определением
+                        остаточной мочи.
+                      </li>
+                      <li>Щитовидная и молочные железы.</li>
+                      <li>Мягкие ткани.</li>
+                      <li>Матка и яичники (ТА и ТВУЗИ).</li>
+                      <li>Акушерское УЗИ 1 и 2 триместра.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card h-100">
+                    <h4 class="mb-15">Физиотерапия</h4>
+                    <p>
+                      Лечение и реабилитация с помощью физических факторов под
+                      наблюдением врача-физиотерапевта.
+                    </p>
+                    <ul class="check-list mb-0">
+                      <li>Лазеротерапия на аппарате «Мустанг-2000».</li>
+                      <li>
+                        Лекарственный электрофорез на МИТ-ЭФ2 и
+                        «Мустанг-Физио-2К».
+                      </li>
+                      <li>
+                        Вакуумный массаж на аппарате «Мустанг-вакуумМиниВак».
+                      </li>
+                      <li>
+                        Паровая мини-сауна «Кедровая фитобочка» (филиал
+                        «Надежда»).
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card h-100">
+                    <h4 class="mb-15">Массаж и гидромассаж</h4>
+                    <p>
+                      Поддержка физического здоровья, снятие напряжения и
+                      реабилитация после травм.
+                    </p>
+                    <ul class="check-list mb-0">
+                      <li>Общий массаж всего тела.</li>
+                      <li>Массаж воротниковой зоны и грудного отдела.</li>
+                      <li>Массаж спины для облегчения боли и усталости.</li>
+                      <li>
+                        Гидромассаж (местный и общий) с глубоким воздействием на
+                        мышцы и ткани.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card h-100">
+                    <h4 class="mb-15">Соляная пещера</h4>
+                    <p>
+                      Галокамера помогает укрепить иммунитет, поддержать
+                      дыхательную и нервную системы взрослым и детям.
+                    </p>
+                    <ul class="check-list">
+                      <li>
+                        Профилактика простуд и восстановление после болезней.
+                      </li>
+                      <li>
+                        Помощь при аллергиях и дерматологических проблемах.
+                      </li>
+                      <li>
+                        Улучшение состояния при бронхитах, гайморитах,
+                        аденоидах.
+                      </li>
+                      <li>
+                        Снижение проявлений вегетососудистой дистонии и
+                        стрессов.
+                      </li>
+                      <li>
+                        Для детей — поддержка дыхательной системы и навыков
+                        саморегуляции.
+                      </li>
+                    </ul>
+                    <p class="font-sm text-muted mb-0">
+                      Процедуры также помогают нормализовать метаболизм и
+                      контроль веса.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Tab 4 -->
+            <div
+              class="tab-pane fade"
+              id="tab-kids"
+              role="tabpanel"
+              aria-labelledby="tab-kids-tab"
+            >
+              <div class="row">
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card bg-white h-100">
+                    <h4 class="mb-15">Арт-терапия «Волшебная палитра»</h4>
+                    <p>
+                      Программа социальной реабилитации женщин и детей 3–5 лет с
+                      использованием изотерапии.
+                    </p>
+                    <ul class="check-list mb-0">
+                      <li>24 занятия по 45 минут, 2 раза в неделю.</li>
+                      <li>До 10 участников в группе.</li>
+                      <li>
+                        Техники: декупаж, витраж, трафарет, аппликация, рисунок,
+                        лепка.
+                      </li>
+                      <li>
+                        Цель — гармонизация отношений в семье и развитие
+                        креативности.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card h-100">
+                    <h4 class="mb-15">Музыкотерапия</h4>
+                    <p>
+                      Психотерапевтический метод для снятия напряжения и
+                      коррекции поведения детей.
+                    </p>
+                    <ul class="check-list mb-0">
+                      <li>Занятия 2 раза в неделю по 30–40 минут.</li>
+                      <li>
+                        Формирование репертуара, пение, танец и игра на
+                        инструментах.
+                      </li>
+                      <li>
+                        Показана при тревожности, поведенческих сложностях,
+                        кризисах развития.
+                      </li>
+                      <li>
+                        Индивидуальные занятия назначаются по рекомендации
+                        логопеда или психолога.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card h-100">
+                    <h4 class="mb-15">Песочная терапия «Из тени в свет»</h4>
+                    <p>
+                      Программа для детей 5–15 лет, развивающая эмоциональную
+                      регуляцию и коммуникативные навыки.
+                    </p>
+                    <ul class="check-list">
+                      <li>21 занятие по 45 минут, 2 раза в неделю.</li>
+                      <li>
+                        До 5 участников, поэтапное знакомство с песком и
+                        анимацией.
+                      </li>
+                      <li>
+                        Используются рассказ, беседа, упражнения, музыка и
+                        фотофиксация результатов.
+                      </li>
+                      <li>
+                        Обязательные этапы: вводная, подготовительная, основная
+                        и заключительная части.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card h-100">
+                    <h4 class="mb-15">Подростковая группа «Ты и Я»</h4>
+                    <p>
+                      Группа для младших (10–13) и старших (14–17) подростков с
+                      трудностями коммуникации.
+                    </p>
+                    <ul class="check-list mb-0">
+                      <li>10–12 встреч по 2 часа (всего 20–24 часа).</li>
+                      <li>
+                        Тренировка общения со сверстниками, работа с конфликтами
+                        со взрослыми.
+                      </li>
+                      <li>
+                        Поддержка детей после госпитализации, на надомном
+                        обучении или при ограниченном круге общения.
+                      </li>
+                      <li>
+                        Формирование навыков саморегуляции и осознанного
+                        поведения в группе.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="service-card bg-white">
+                    <h4 class="mb-15">Стретчинг и пилатес для взрослых</h4>
+                    <p>
+                      Программа для женщин 18+, подходит независимо от уровня
+                      подготовки.
+                    </p>
+                    <ul class="check-list mb-0">
+                      <li>
+                        1–2 тренировки в неделю по 60 минут, курс 10–16 занятий.
+                      </li>
+                      <li>
+                        Укрепление мышечного корсета, снятие зажимов, улучшение
+                        сна и эмоциональной устойчивости.
+                      </li>
+                      <li>
+                        Контроль дыхания и мягкая физическая нагрузка помогают
+                        восстановить ресурсное состояние.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Tab 5 -->
+            <div
+              class="tab-pane fade"
+              id="tab-legal"
+              role="tabpanel"
+              aria-labelledby="tab-legal-tab"
+            >
+              <div class="row">
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card bg-white h-100">
+                    <h4 class="mb-15">Юридическое консультирование</h4>
+                    <p>
+                      Помогаем защитить права женщин и детей, разъясняем порядок
+                      получения бесплатной юридической помощи.
+                    </p>
+                    <ul class="check-list mb-0">
+                      <li>Развод, алименты, установление отцовства.</li>
+                      <li>
+                        Жилищные споры: раздел имущества, вселение, выселение.
+                      </li>
+                      <li>
+                        Вопросы гражданского, семейного, уголовного
+                        законодательства и прав женщин/детей.
+                      </li>
+                      <li>
+                        Подготовка к судебным заседаниям и сопровождение в них.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-30">
+                  <div class="service-card h-100">
+                    <h4 class="mb-15">Документы и правовое сопровождение</h4>
+                    <ul class="check-list">
+                      <li>Восстановление утраченных документов.</li>
+                      <li>
+                        Составление заявлений, ходатайств, обращений, запросов.
+                      </li>
+                      <li>
+                        Помощь в сборе, подаче и отслеживании документов в
+                        госорганах.
+                      </li>
+                      <li>
+                        Консультации по социальным услугам и бесплатной юрпомощи
+                        (ФЗ № 324-ФЗ).
+                      </li>
+                    </ul>
+                    <p class="font-sm text-muted mb-0">
+                      Социально-правовые услуги предоставляются бесплатно или по
+                      социальным тарифам в соответствии с Федеральным законом №
+                      442-ФЗ «Об основах социального обслуживания граждан».
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Tab 6 -->
+            <div
+              class="tab-pane fade"
+              id="tab-extra"
+              role="tabpanel"
+              aria-labelledby="tab-extra-tab"
+            >
+              <div class="row">
+                <div class="col-lg-5 mb-30">
+                  <div class="service-card bg-white h-100">
+                    <h4 class="mb-15">Услуги парикмахера</h4>
+                    <p>
+                      Опытный мастер поможет позаботиться о себе, сменить образ
+                      и почувствовать внутренние перемены. Услуга особенно важна
+                      женщинам, которые восстанавливаются после кризиса.
+                    </p>
+                    <p class="mb-0">
+                      «Если женщина меняет причёску, значит, она готова менять
+                      жизнь» — мы поддерживаем это решение в тёплой и безопасной
+                      атмосфере.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-7 mb-30">
+                  <div class="service-card h-100">
+                    <h4 class="mb-15">Организация детских праздников</h4>
+                    <p>
+                      Команда центра берёт на себя сценарий, оформление и
+                      сопровождение праздника, чтобы ребёнок получил яркие
+                      впечатления.
+                    </p>
+                    <ul class="check-list">
+                      <li>
+                        Помещение 44 кв.м. с кухонной комнатой (до 15 гостей),
+                        оформление под выбранную тему.
+                      </li>
+                      <li>
+                        Помощь с сервировкой стола и согласованием угощений.
+                      </li>
+                      <li>
+                        Развлекательная программа до 60 минут: игры,
+                        мастер-классы, конкурсы, мини-квесты, спортивные
+                        эстафеты.
+                      </li>
+                      <li>
+                        Встреча гостей, мини-дискотека, караоке и памятные
+                        подарки, фотосопровождение.
+                      </li>
+                    </ul>
+                    <p class="font-sm text-muted mb-10">
+                      Продолжительность 60/90 минут, 5–15 участников, возраст
+                      4–14 лет.
+                    </p>
+                    <p class="mb-0">
+                      <strong>Услуга платная.</strong> Стоимость уточняйте по
+                      телефонам (499) 977-17-05, (499) 977-34-38.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="newsletter bg-brand-3 pt-80 pb-80">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8 mb-30 mb-lg-0">
+              <h3 class="font-heading mb-15">Нужна срочная поддержка?</h3>
+              <p class="font-md mb-0">
+                Позвоните на телефон доверия или оставьте заявку — специалисты
+                свяжутся в день обращения, помогут собрать документы и выбрать
+                подходящую программу помощи.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-right">
+              <a class="btn btn-lg bg-dark text-white" href="page-contact.html"
+                >Связаться с нами</a
+              >
+              <p class="mt-20 mb-0">
+                <strong>Телефон доверия:</strong> 8 (499) 977-20-10
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End Main content -->
+
+    <!--end site-bottom-->
+    <!-- Footer Start-->
+    <footer class="pt-65 bg-dark">
+      <div class="container">
+        <div class="row mb-65">
+          <div class="col-md-6">
+            <div class="logo footer-logo wow fadeIn animated">
+              <a href="index.html">
+                <img src="assets/imgs/theme/logo-white.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="d-flex text-right text-sm-left align-self-center justify-content-end wow fadeIn animated"
+            >
+              <h5 class="mr-15 text-white mb-0 align-self-center">
+                Телефон доверия: 8 (499) 977-20-10
+              </h5>
+              <button class="btn btn-lg bg-brand-1">
+                <a href="page-contact.html" class="text-white">Связаться</a>
+              </button>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="bottom-line mt-40"></div>
+          </div>
+        </div>
+        <div class="row bottom-area-2">
+          <div class="col-lg-4 col-md-6">
+            <div class="sidebar-widget widget-about wow fadeIn animated mb-30">
+              <div class="widget-header-2 position-relative mb-30">
+                <h5 class="mt-5 mb-30">О центре</h5>
+              </div>
+              <div class="textwidget">
+                <p>
+                  ГБУ «Кризисный центр помощи женщинам и детям» оказывает помощь
+                  женщинам и детям, оказавшимся в трудной жизненной ситуации.
+                </p>
+                <p>
+                  <strong class="color-black">Горячая линия:</strong><br />
+                  8 (499) 977-17-05
+                </p>
+                <p>
+                  <strong class="color-black">ул. Дубки, д.9А</strong><br />
+                  8 (499) 729-51-81
+                </p>
+                <p>
+                  <strong class="color-black">Филиал «Надежда»</strong><br />
+                  ул. Новопоселковая, д.3Б<br />
+                  8 (495) 442-24-84
+                </p>
+                <p>
+                  <strong class="color-black">Филиал «Маленькая мама»</strong
+                  ><br />
+                  ул. Нежинская, д.10<br />
+                  8 (495) 442-24-84
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="sidebar-widget widget_categories wow fadeIn animated mb-30"
+              data-wow-delay="0.1s"
+            >
+              <div class="widget-header-2 position-relative mb-30">
+                <h5 class="mt-5 mb-30">Быстрые ссылки</h5>
+              </div>
+              <ul class="font-small">
+                <li class="cat-item cat-item-2">
+                  <a href="page-about.html">О центре</a>
+                </li>
+                <li class="cat-item cat-item-4">
+                  <a href="category.html">Услуги</a>
+                </li>
+                <li class="cat-item cat-item-5">
+                  <a href="category.html">Психологическая помощь</a>
+                </li>
+                <li class="cat-item cat-item-6">
+                  <a href="category.html">Юридическая поддержка</a>
+                </li>
+                <li class="cat-item cat-item-7">
+                  <a href="category.html">Телефон доверия</a>
+                </li>
+                <li class="cat-item cat-item-7">
+                  <a href="page-contact.html">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="sidebar-widget widget_tagcloud wow fadeIn animated mb-30"
+              data-wow-delay="0.2s"
+            >
+              <div class="widget-header-2 position-relative mb-30">
+                <h5 class="mt-5 mb-30">Теги</h5>
+              </div>
+              <div class="tagcloud mt-50">
+                <a class="tag-cloud-link" href="category.html">помощь</a>
+                <a class="tag-cloud-link" href="category.html">психология</a>
+                <a class="tag-cloud-link" href="category.html">реабилитация</a>
+                <a class="tag-cloud-link" href="category.html">поддержка</a>
+                <a class="tag-cloud-link" href="category.html">кризис</a>
+                <a class="tag-cloud-link" href="category.html"
+                  >телефон доверия</a
+                >
+                <a class="tag-cloud-link" href="category.html"
+                  >юридическая помощь</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copy-right pt-30 mt-20 wow fadeIn animated font-md">
+          <p class="float-md-left font-small text-muted">
+            &copy; 2025, ГБУ «Кризисный центр помощи женщинам и детям»
+          </p>
+          <ul
+            class="social-network d-inline-block list-inline color-white mb-20 float-right"
+          >
+            <li class="list-inline-item">
+              <a href="#" target="_blank" title="Telegram"
+                ><img
+                  src="assets/imgs/theme/telegram.png"
+                  alt="Telegram"
+                  style="width: 24px; filter: brightness(0) invert(1)"
+              /></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" target="_blank" title="VK"
+                ><img
+                  src="assets/imgs/theme/vk.png"
+                  alt="VK"
+                  style="width: 24px; filter: brightness(0) invert(1)"
+              /></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                href="https://мойсемейныйцентр.москва/"
+                target="_blank"
+                title="Мой семейный центр"
+                ><i class="elegant-icon icon_house_alt"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div class="dark-mark"></div>
+    <!-- Vendor JS-->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/vendor/bootstrap.min.js"></script>
+    <script src="./assets/js/vendor/jquery.slicknav.js"></script>
+    <script src="./assets/js/vendor/slick.min.js"></script>
+    <script src="./assets/js/vendor/wow.min.js"></script>
+    <script src="./assets/js/vendor/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/vendor/jquery.theia.sticky.js"></script>
+    <!-- Template  JS -->
+    <script src="./assets/js/main.js"></script>
+    <script>
+      // Активация вкладок при переходе по якорям
+      $(document).ready(function () {
+        // Проверяем наличие якоря в URL
+        var hash = window.location.hash;
+        if (hash) {
+          // Убираем # из начала
+          var tabId = hash.substring(1);
+          // Проверяем, существует ли такая вкладка
+          var $tab = $("#" + tabId + "-tab");
+          if ($tab.length) {
+            // Активируем вкладку
+            $tab.tab("show");
+            // Прокручиваем к вкладкам
+            setTimeout(function () {
+              $("html, body").animate(
+                {
+                  scrollTop: $(".services-tabs").offset().top - 100,
+                },
+                500
+              );
+            }, 100);
+          }
+        }
+
+        // Обработка кликов по ссылкам с якорями
+        $('a[href^="#tab-"]').on("click", function (e) {
+          var targetTab = $(this).attr("href").substring(1) + "-tab";
+          var $targetTab = $("#" + targetTab);
+          if ($targetTab.length) {
+            e.preventDefault();
+            $targetTab.tab("show");
+            // Прокручиваем к вкладкам
+            setTimeout(function () {
+              $("html, body").animate(
+                {
+                  scrollTop: $(".services-tabs").offset().top - 100,
+                },
+                500
+              );
+            }, 100);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

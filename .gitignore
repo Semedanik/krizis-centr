@@ -1,0 +1,54 @@
+# Резервные копии и неиспользуемые файлы
+flow-template/_backup/
+_backup/
+
+# Документация шаблона (если не нужна)
+docs/
+
+# Системные файлы macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Временные файлы
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+# Файлы редакторов
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Исходные файлы дизайна (если не нужны в репозитории)
+*.ai
+*.psd
+*.sketch
+*.fig
+
+# Файлы браузера
+*.url
+
+# Node modules (если используется)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Окружение и переменные
+.env
+.env.local
+.env.*.local
+
+# Служебные файлы
+*.bak
+*.backup
+
